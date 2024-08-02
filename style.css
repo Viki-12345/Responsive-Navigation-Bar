@@ -1,0 +1,91 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: black;
+}
+nav{
+    background-color: blueviolet;
+    height: 80px;
+    width: 100%;
+}
+label.logo{
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    line-height: 80px;
+    margin: 50px;
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: white;
+    text-transform: uppercase;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 20px;
+}
+a.active,a:hover{
+    background: rgba(223, 233, 235, 0.793);
+    transition: .5s;
+}
+#check{
+    display: none;
+}
+.check-btn img{
+    
+    float: right;
+    width: 30px;
+    margin: 30px;
+    cursor: pointer;
+    margin-right: 40px;
+    display: none;
+
+}
+@media (max-width:906px){
+    .check-btn img{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 80px;
+        left: 0;
+        text-align: center;
+        left: -100%;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a:hover,a.active{
+        background: none;
+        color: blueviolet;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+   
+
+}
+@media(max-width:335px){
+    label.logo{
+        margin: 20px;
+    }
+}
